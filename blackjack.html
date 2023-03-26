@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blackjack</title>
+    <link rel="stylesheet" href="style.css" href="https://fonts.google.com/specimen/Satisfy?preview.text=Blacjack&preview.text_type=custom">
+    <style>
+        body{
+            font-family: "Tangerine", serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <p class="tada" id="text"><i>Blackjack</i></p> <br>
+            <div>
+                <button type="submit" class="btn" id="start"><a href=bj.html>Start</a></button> <br>
+            </div>
+            <div>
+                <button type="submit" class="btn" id="zasady" onclick="otwpopup()">Zasady</button>
+                <div class="popup" id="popup">
+                    <img src="rules.png">
+                    <h2>Zasady</h2>
+                    <p> Zadaniem gracza jest uzyskać jak najbliżej (ale nie więcej niż) 21 punktów. </p>
+                    <p>Punktacja kart:</p>
+                    
+                       - Karty od dwójki do dziesiątki mają wartość równą numerowi karty <br>
+                       - Walet dama i król mają wartość równa 10 punktów<br>
+                       - As ma wartość równą 1 lub 11 w zależności co jest lepsze dla gracza<br>
+                   
+                    <p>W Blackjacka gra się przeciwko krupierowi.Gracz i krupier dostają po dwie karty. Obydwie karty
+                        gracza są odkryte, natomiast tylko jedna karta krupiera jest pokazana graczowi. Gracz teraz może
+                        podjąć decyzje o swoim następnym ruchu. Gracz ma następujące możliwości:</p>
+                       - Dobrać kartę <br>
+                       - Nie dobierać karty
+                    
+                    <button type="button" onclick="zampopup()">OK</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            let popup = document.getElementById("popup")
+
+            function otwpopup() {
+                popup.classList.add("open-popup")
+            }
+            function zampopup() {
+                popup.classList.remove("open-popup")
+            }
+        </script>
+</body>
+
+</html>
